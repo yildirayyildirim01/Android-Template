@@ -26,3 +26,4 @@ dependencyResolutionManagement {
 rootProject.name = "Android-Template"
 include(":app")
 include(":core:mvi")
+include(":core:common")
