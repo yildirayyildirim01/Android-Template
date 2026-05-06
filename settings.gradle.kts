@@ -27,3 +27,5 @@ rootProject.name = "Android-Template"
 include(":app")
 include(":core:mvi")
 include(":core:common")
+include(":firebase:auth:domain")
+include(":firebase:auth:data")
