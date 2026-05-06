@@ -11,9 +11,14 @@ lifecycleRuntimeKtx = "2.10.0"
 kotlinxCoroutines = "1.10.2"
 hilt = "2.59.2"
 ksp = "2.3.6"
+firebaseBom = "34.12.0"
+googleServices = "4.4.4"
+firebaseCrashlyticsPlugin = "3.0.7"
 [libraries]
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+google-services-gradlePlugin = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }
+firebase-crashlytics-gradlePlugin = { group = "com.google.firebase", name = "firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsPlugin" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -26,13 +31,34 @@ kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-config = { group = "com.google.firebase", name = "firebase-config" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
 template-android-application = { id = "com.android.template.android.application", version = "unspecified" }
 template-android-library = { id = "com.android.template.android.library", version = "unspecified" }
 template-android-test = { id = "com.android.template.android.test", version = "unspecified" }
 template-android-hilt = { id = "com.android.template.android.hilt", version = "unspecified" }
+template-firebase-base = { id = "com.android.template.firebase.base", version = "unspecified" }
+template-firebase-google-services = { id = "com.android.template.firebase.google-services", version = "unspecified" }
+template-firebase-analytics = { id = "com.android.template.firebase.analytics", version = "unspecified" }
+template-firebase-auth = { id = "com.android.template.firebase.auth", version = "unspecified" }
+template-firebase-remote-config = { id = "com.android.template.firebase.remote-config", version = "unspecified" }
+template-firebase-crashlytics = { id = "com.android.template.firebase.crashlytics", version = "unspecified" }
+template-firebase-database = { id = "com.android.template.firebase.database", version = "unspecified" }
+template-firebase-firestore = { id = "com.android.template.firebase.firestore", version = "unspecified" }
+template-firebase-messaging = { id = "com.android.template.firebase.messaging", version = "unspecified" }
+template-firebase-storage = { id = "com.android.template.firebase.storage", version = "unspecified" }

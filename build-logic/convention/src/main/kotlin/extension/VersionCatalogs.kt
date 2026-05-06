@@ -21,6 +21,11 @@ fun Project.addCatalogDependencyIfAbsent(configurationName: String, alias: Strin
     addDependencyIfAbsent(configurationName, dependency)
 }
 
+fun Project.addCatalogPlatformDependencyIfAbsent(configurationName: String, alias: String) {
+    val dependency = dependencies.platform(libsCatalog().findLibrary(alias).get().get())
+    addDependencyIfAbsent(configurationName, dependency)
+}
+
 fun Project.addDependencyIfAbsent(configurationName: String, dependency: Dependency) {
     val hasDependency = configurations.getByName(configurationName).dependencies.any {
         it.group == dependency.group && it.name == dependency.name
