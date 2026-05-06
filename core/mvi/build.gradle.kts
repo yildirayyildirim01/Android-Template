@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.template.android.library)
-    alias(libs.plugins.template.android.kotlin)
     alias(libs.plugins.template.android.test)
 }
 

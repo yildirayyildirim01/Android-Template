@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.template.android.application)
-    alias(libs.plugins.template.android.kotlin)
     alias(libs.plugins.template.android.test)
+    alias(libs.plugins.template.android.hilt)
 }
 
 android {

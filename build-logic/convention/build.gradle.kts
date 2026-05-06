@@ -19,13 +19,13 @@ gradlePlugin {
             id = "com.android.template.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
-        register("androidKotlin") {
-            id = "com.android.template.android.kotlin"
-            implementationClass = "AndroidKotlinConventionPlugin"
-        }
         register("androidTest") {
             id = "com.android.template.android.test"
             implementationClass = "AndroidTestConventionPlugin"
+        }
+        register("androidHilt") {
+            id = "com.android.template.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
         }
     }
 }
