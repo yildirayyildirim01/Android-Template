@@ -12,6 +12,7 @@ android {
 dependencies {
     implementation(project(":firebase:remote-config:domain"))
     implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.play.services)
 
     testImplementation(libs.kotlinx.coroutines.test)
 }
