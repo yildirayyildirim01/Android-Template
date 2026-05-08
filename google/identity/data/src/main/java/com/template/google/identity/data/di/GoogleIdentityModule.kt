@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.google.identity.data.di
 
 import android.content.Context
@@ -19,14 +24,13 @@ abstract class GoogleIdentityModule {
     @Binds
     @Singleton
     abstract fun bindGoogleIdentityRepository(
-        impl: CredentialManagerGoogleIdentityRepository,
+        impl: CredentialManagerGoogleIdentityRepository
     ): GoogleIdentityRepository
 
     companion object {
         @Provides
         @Singleton
-        fun provideCredentialManager(
-            @ApplicationContext context: Context,
-        ): CredentialManager = CredentialManager.create(context)
+        fun provideCredentialManager(@ApplicationContext context: Context): CredentialManager =
+            CredentialManager.create(context)
     }
 }

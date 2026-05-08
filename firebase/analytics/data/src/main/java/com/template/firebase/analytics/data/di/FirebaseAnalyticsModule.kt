@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.analytics.data.di
 
 import android.content.Context
@@ -23,8 +28,7 @@ abstract class FirebaseAnalyticsModule {
     companion object {
         @Provides
         @Singleton
-        fun provideFirebaseAnalytics(
-            @ApplicationContext context: Context,
-        ): FirebaseAnalytics = FirebaseAnalytics.getInstance(context)
+        fun provideFirebaseAnalytics(@ApplicationContext context: Context): FirebaseAnalytics =
+            FirebaseAnalytics.getInstance(context)
     }
 }

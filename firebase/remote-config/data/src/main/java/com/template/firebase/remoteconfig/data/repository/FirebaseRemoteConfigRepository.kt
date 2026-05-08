@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.remoteconfig.data.repository
 
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
@@ -8,7 +13,7 @@ import kotlinx.coroutines.tasks.await
 
 @Singleton
 class FirebaseRemoteConfigRepository @Inject constructor(
-    private val firebaseRemoteConfig: FirebaseRemoteConfig,
+    private val firebaseRemoteConfig: FirebaseRemoteConfig
 ) : RemoteConfigRepository {
 
     override suspend fun fetchAndActivate(): Boolean =

@@ -1,7 +1,14 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.mvi
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlin.coroutines.CoroutineContext
+import kotlin.coroutines.EmptyCoroutineContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
@@ -14,20 +21,19 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlin.coroutines.CoroutineContext
-import kotlin.coroutines.EmptyCoroutineContext
 
 abstract class MviViewModel<Intent : MviIntent, State : MviState, Effect : MviEffect>(
     initialState: State,
-    effectBufferCapacity: Int = DEFAULT_EFFECT_BUFFER_CAPACITY,
-) : ViewModel(), MviContainer<Intent, State, Effect> {
+    effectBufferCapacity: Int = DEFAULT_EFFECT_BUFFER_CAPACITY
+) : ViewModel(),
+    MviContainer<Intent, State, Effect> {
 
     private val mutableState = MutableStateFlow(initialState)
     override val state: StateFlow<State> = mutableState.asStateFlow()
 
     private val mutableEffect = MutableSharedFlow<Effect>(
         replay = 0,
-        extraBufferCapacity = effectBufferCapacity,
+        extraBufferCapacity = effectBufferCapacity
     )
     override val effect: SharedFlow<Effect> = mutableEffect.asSharedFlow()
 
@@ -62,7 +68,7 @@ abstract class MviViewModel<Intent : MviIntent, State : MviState, Effect : MviEf
 
     protected fun launch(
         context: CoroutineContext = EmptyCoroutineContext,
-        block: suspend CoroutineScope.() -> Unit,
+        block: suspend CoroutineScope.() -> Unit
     ): Job = viewModelScope.launch(context = context, block = block)
 
     override fun onCleared() {

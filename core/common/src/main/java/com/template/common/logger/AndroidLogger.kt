@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.common.logger
 
 import android.util.Log
@@ -6,9 +11,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class AndroidLogger @Inject constructor(
-    @param:IsDebug private val isDebug: Boolean,
-) : Logger {
+class AndroidLogger @Inject constructor(@param:IsDebug private val isDebug: Boolean) : Logger {
 
     override fun d(tag: String, message: String, throwable: Throwable?) {
         if (!isDebug) return

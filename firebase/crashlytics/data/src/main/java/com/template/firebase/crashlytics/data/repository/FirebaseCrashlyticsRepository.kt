@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.crashlytics.data.repository
 
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -7,7 +12,7 @@ import javax.inject.Singleton
 
 @Singleton
 class FirebaseCrashlyticsRepository @Inject constructor(
-    private val firebaseCrashlytics: FirebaseCrashlytics,
+    private val firebaseCrashlytics: FirebaseCrashlytics
 ) : CrashlyticsRepository {
 
     override fun log(message: String) {

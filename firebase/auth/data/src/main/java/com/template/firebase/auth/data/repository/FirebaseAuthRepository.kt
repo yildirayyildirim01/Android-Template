@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.auth.data.repository
 
 import com.google.firebase.auth.FirebaseAuth
@@ -13,9 +18,8 @@ import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.tasks.await
 
 @Singleton
-class FirebaseAuthRepository @Inject constructor(
-    private val firebaseAuth: FirebaseAuth,
-) : AuthRepository {
+class FirebaseAuthRepository @Inject constructor(private val firebaseAuth: FirebaseAuth) :
+    AuthRepository {
 
     override val currentUser: AuthUser?
         get() = firebaseAuth.currentUser?.toAuthUser()

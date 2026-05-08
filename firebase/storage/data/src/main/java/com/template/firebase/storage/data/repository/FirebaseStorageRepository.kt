@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.storage.data.repository
 
 import android.net.Uri
@@ -9,15 +14,13 @@ import javax.inject.Singleton
 import kotlinx.coroutines.tasks.await
 
 @Singleton
-class FirebaseStorageRepository @Inject constructor(
-    private val firebaseStorage: FirebaseStorage,
-) : StorageRepository {
+class FirebaseStorageRepository @Inject constructor(private val firebaseStorage: FirebaseStorage) :
+    StorageRepository {
 
     override fun reference(path: String?): StorageReference =
         path?.let(firebaseStorage::getReference) ?: firebaseStorage.reference
 
-    override suspend fun getDownloadUrl(path: String): Uri =
-        reference(path).downloadUrl.await()
+    override suspend fun getDownloadUrl(path: String): Uri = reference(path).downloadUrl.await()
 
     override suspend fun putBytes(path: String, bytes: ByteArray): Uri {
         val result = reference(path).putBytes(bytes).await()

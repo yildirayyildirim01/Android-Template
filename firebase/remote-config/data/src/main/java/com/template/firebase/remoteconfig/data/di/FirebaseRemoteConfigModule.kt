@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.remoteconfig.data.di
 
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
@@ -16,7 +21,9 @@ abstract class FirebaseRemoteConfigModule {
 
     @Binds
     @Singleton
-    abstract fun bindRemoteConfigRepository(impl: FirebaseRemoteConfigRepository): RemoteConfigRepository
+    abstract fun bindRemoteConfigRepository(
+        impl: FirebaseRemoteConfigRepository
+    ): RemoteConfigRepository
 
     companion object {
         @Provides

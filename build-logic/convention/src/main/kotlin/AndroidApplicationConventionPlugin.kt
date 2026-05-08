@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 import com.android.build.api.dsl.ApplicationExtension
 import extension.applyPluginIfAbsent
 import extension.configureJavaCompatibility

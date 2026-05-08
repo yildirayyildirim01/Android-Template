@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.messaging.data.repository
 
 import com.google.firebase.messaging.FirebaseMessaging
@@ -8,7 +13,7 @@ import kotlinx.coroutines.tasks.await
 
 @Singleton
 class FirebaseMessagingRepository @Inject constructor(
-    private val firebaseMessaging: FirebaseMessaging,
+    private val firebaseMessaging: FirebaseMessaging
 ) : MessagingRepository {
 
     override suspend fun getToken(): String = firebaseMessaging.token.await()

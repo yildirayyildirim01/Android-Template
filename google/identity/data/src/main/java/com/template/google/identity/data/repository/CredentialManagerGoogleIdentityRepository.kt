@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.google.identity.data.repository
 
 import android.content.Context
@@ -7,8 +12,8 @@ import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
-import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential.Companion.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
+import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException
 import com.template.google.identity.domain.model.GoogleIdToken
 import com.template.google.identity.domain.model.GoogleSignInRequest
 import com.template.google.identity.domain.repository.GoogleIdentityRepository
@@ -19,7 +24,7 @@ import javax.inject.Singleton
 @Singleton
 class CredentialManagerGoogleIdentityRepository @Inject constructor(
     @param:ApplicationContext private val context: Context,
-    private val credentialManager: CredentialManager,
+    private val credentialManager: CredentialManager
 ) : GoogleIdentityRepository {
 
     override suspend fun getGoogleIdToken(request: GoogleSignInRequest): GoogleIdToken {
@@ -38,7 +43,7 @@ class CredentialManagerGoogleIdentityRepository @Inject constructor(
 
         val credential = credentialManager.getCredential(
             context = context,
-            request = credentialRequest,
+            request = credentialRequest
         ).credential
 
         if (
@@ -50,7 +55,7 @@ class CredentialManagerGoogleIdentityRepository @Inject constructor(
 
         return try {
             GoogleIdToken(
-                value = GoogleIdTokenCredential.createFrom(credential.data).idToken,
+                value = GoogleIdTokenCredential.createFrom(credential.data).idToken
             )
         } catch (exception: GoogleIdTokenParsingException) {
             throw IllegalStateException("Google ID token could not be parsed.", exception)

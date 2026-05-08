@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.crashlytics.data.di
 
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -16,7 +21,9 @@ abstract class FirebaseCrashlyticsModule {
 
     @Binds
     @Singleton
-    abstract fun bindCrashlyticsRepository(impl: FirebaseCrashlyticsRepository): CrashlyticsRepository
+    abstract fun bindCrashlyticsRepository(
+        impl: FirebaseCrashlyticsRepository
+    ): CrashlyticsRepository
 
     companion object {
         @Provides

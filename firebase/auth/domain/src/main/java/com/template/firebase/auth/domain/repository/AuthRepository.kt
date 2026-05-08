@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.auth.domain.repository
 
 import com.template.firebase.auth.domain.model.AuthUser

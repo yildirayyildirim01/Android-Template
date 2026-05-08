@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.analytics.data.repository
 
 import android.os.Bundle
@@ -8,7 +13,7 @@ import javax.inject.Singleton
 
 @Singleton
 class FirebaseAnalyticsRepository @Inject constructor(
-    private val firebaseAnalytics: FirebaseAnalytics,
+    private val firebaseAnalytics: FirebaseAnalytics
 ) : AnalyticsRepository {
 
     override fun logEvent(name: String, params: Bundle?) {

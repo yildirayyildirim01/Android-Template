@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package extension
 
 import com.android.build.api.dsl.ApplicationExtension
@@ -22,9 +27,7 @@ internal fun LibraryExtension.configureJavaCompatibility(javaVersion: JavaVersio
     }
 }
 
-internal fun Project.configureKotlinJvmTarget(
-    javaVersion: JavaVersion,
-) {
+internal fun Project.configureKotlinJvmTarget(javaVersion: JavaVersion) {
     tasks.withType<KotlinJvmCompile>().configureEach {
         compilerOptions {
             jvmTarget.set(JvmTarget.fromTarget(javaVersion.toString()))

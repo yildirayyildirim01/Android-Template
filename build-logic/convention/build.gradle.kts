@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 plugins {
     `kotlin-dsl`
 }
@@ -9,6 +14,7 @@ dependencies {
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.google.services.gradlePlugin)
     compileOnly(libs.firebase.crashlytics.gradlePlugin)
+    implementation(libs.spotless.gradlePlugin)
 }
 
 gradlePlugin {
@@ -28,6 +34,10 @@ gradlePlugin {
         register("androidHilt") {
             id = "com.android.template.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
+        }
+        register("spotless") {
+            id = "com.android.template.spotless"
+            implementationClass = "SpotlessConventionPlugin"
         }
         register("firebaseBase") {
             id = "com.android.template.firebase.base"

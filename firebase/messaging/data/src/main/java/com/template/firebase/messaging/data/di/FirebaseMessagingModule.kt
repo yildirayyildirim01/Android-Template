@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Android Template
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package com.template.firebase.messaging.data.di
 
 import com.google.firebase.messaging.FirebaseMessaging
