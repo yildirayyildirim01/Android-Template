@@ -16,6 +16,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             applyPluginIfAbsent("com.android.library")
+            applyPluginIfAbsent("com.android.template.publish")
 
             val javaVersion = JavaVersion.VERSION_11
 

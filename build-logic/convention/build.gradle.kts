@@ -39,6 +39,10 @@ gradlePlugin {
             id = "com.android.template.spotless"
             implementationClass = "SpotlessConventionPlugin"
         }
+        register("publish") {
+            id = "com.android.template.publish"
+            implementationClass = "PublishConventionPlugin"
+        }
         register("firebaseBase") {
             id = "com.android.template.firebase.base"
             implementationClass = "FirebaseBaseConventionPlugin"

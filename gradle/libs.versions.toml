@@ -64,6 +64,7 @@ template-android-library = { id = "com.android.template.android.library" }
 template-android-test = { id = "com.android.template.android.test" }
 template-android-hilt = { id = "com.android.template.android.hilt" }
 template-spotless = { id = "com.android.template.spotless" }
+template-publish = { id = "com.android.template.publish" }
 template-firebase-base = { id = "com.android.template.firebase.base" }
 template-firebase-google-services = { id = "com.android.template.firebase.google-services" }
 template-firebase-analytics = { id = "com.android.template.firebase.analytics" }
